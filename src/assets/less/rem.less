@@ -1,0 +1,16 @@
+@rem:10/1920rem;
+.font-dpr(@a:@fs5){
+	@b:unit(@a,px);
+	[data-dpr="1"] &{
+		&:extend([data-dpr="1"]);
+		font-size: @b/(1/1);
+	}
+	[data-dpr="2"] &{
+		&:extend([data-dpr="2"]);
+		font-size: @b/(2/3);
+	}
+	[data-dpr="3"] &{
+		&:extend([data-dpr="3"]);
+		font-size: @b/(1/2);
+	}
+}
