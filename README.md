@@ -21,7 +21,12 @@ npm install
 npm run dev
 ```
 
-发布代码
+发布测试
+```
+npm run testing
+```
+
+发布正式
 ```
 npm run build
 ```
@@ -44,7 +49,6 @@ npm run build
 │   ├── store          // vuex状态管理
 │   ├── views          // 各种页面
 |   ├── mixins         // 混合通用方法
-|   ├── store          // 状态管理
 |   ├── utils          // 工具库
 │   └── main.js        // Webpack 预编译入口
 </pre>
