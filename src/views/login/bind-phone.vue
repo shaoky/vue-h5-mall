@@ -201,17 +201,17 @@ export default {
 
 <style scoped lang="less">
 @import '../../assets/less/define.less';
-.bind-phone{padding:0 @rem*36;width:@rem*750;margin:0 auto;
+.bind-phone{padding: 0 @rem*36; width: @rem*750; margin: 0 auto;
     .container{
-        .item{margin-top:@rem*32;
-            .title{font-size:@rem*28;color:#000;}
-            .v-box{border-bottom:1px solid #f5f5f5;margin-top:@rem*30;padding-bottom:@rem*12;display:flex;align-items:center;
-                span{display:inline-block;text-align:center;width:@rem*64;height:@rem*40;line-height:@rem*40;background:#fe823f;font-size:@rem*28;color:#000;border-radius:@rem*4;margin-right:@rem*20;}
-                .btn-code{padding:@rem*5 @rem*10;background:#fe823f;font-size:@rem*24;color:#fff;border-radius:@rem*4;}
+        .item{margin-top: @rem*32;
+            .title{font-size: @rem*28;color:#000;}
+            .v-box{border-bottom: 1px solid #f5f5f5; margin-top: @rem*30; padding-bottom: @rem*12; display: flex; align-items: center;
+                span{display: inline-block; text-align: center; width: @rem*64; height: @rem*40; line-height: @rem*40; background:#fe823f; font-size: @rem*28; color:#000;border-radius: @rem*4;margin-right:@rem*20;}
+                .btn-code{padding: @rem*5 @rem*10; background:#fe823f; font-size: @rem*24; color:#fff; border-radius: @rem*4;}
             }
         }
-        .item:first-child{margin-top:@rem*100;}
-        .btn{width:@rem*670;height:@rem*88;line-height:@rem*88;text-align:center;font-size:@rem*32;color:#fff;background:#fe823f;border-radius:@rem*8;margin-top:@rem*80;}
+        .item:first-child{margin-top: @rem*100;}
+        .btn{width: @rem*670; height: @rem*88; line-height: @rem*88; text-align: center; font-size: @rem*32; color:#fff; background:#fe823f; border-radius: @rem*8; margin-top: @rem*80;}
         .active{background:#ccc!important;}
     }
 }

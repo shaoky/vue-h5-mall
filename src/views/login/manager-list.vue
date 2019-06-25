@@ -107,25 +107,25 @@ export default {
 
 <style scoped lang="less">
 @import '../../assets/less/define.less';
-.manager-list{padding:0 @rem*25;width:@rem*750;margin:0 auto;
+.manager-list{padding: 0 @rem*25; width: @rem*750; margin: 0 auto;
     .container{
-        .item{display:flex;padding:@rem*28 0;border-bottom:1px solid #f5f5f5;
-            img{width:@rem*100;height:@rem*100;}
-            .item-right{flex:1;display:flex;align-items:center;padding:@rem*15;height:@rem*100;
-                .referee-info{flex:1;
-                    .name{font-size:@rem*28;color:#000;}
-                    .id{font-size:@rem*28;color:#959595;}
+        .item{display: flex; padding: @rem*28 0; border-bottom: 1px solid #f5f5f5;
+            img{width: @rem*100; height: @rem*100;}
+            .item-right{flex: 1; display: flex; align-items: center; padding: @rem*15; height: @rem*100;
+                .referee-info{flex: 1;
+                    .name{font-size: @rem*28; color:#000;}
+                    .id{font-size: @rem*28; color:#959595;}
                 }
-                .btn{width:@rem*153;height:@rem*56;line-height:@rem*56;text-align:center;font-size:@rem*28;color:#fff;background:#fe823f;border-radius:4px;}
+                .btn{width: @rem*153; height: @rem*56; line-height: @rem*56; text-align: center; font-size: @rem*28; color:#fff; background:#fe823f; border-radius: 4px;}
             }
         }
     }
-    .message{position:absolute;right:@rem*24;bottom:@rem*40;width:@rem*40;height:@rem*40;
-        img{width:@rem*40;height:@rem*40;}
+    .message{position: absolute; right: @rem*24; bottom: @rem*40; width: @rem*40; height: @rem*40;
+        img{width: @rem*40; height: @rem*40;}
     }
 
-    .content{padding:@rem*55 @rem*100;word-wrap: break-word;word-break: normal;line-height:@rem*60;font-size:@rem*28;color:#000;text-align:center;}
-    .dialog-btn{font-size:@rem*30;color:#fff;height:@rem*80;line-height:@rem*80;background:#fe823f;}
+    .content{padding: @rem*55 @rem*100; word-wrap: break-word; word-break: normal; line-height: @rem*60; font-size: @rem*28; color:#000; text-align: center;}
+    .dialog-btn{font-size: @rem*30; color:#fff; height: @rem*80; line-height: @rem*80; background:#fe823f;}
 
 }
 </style>

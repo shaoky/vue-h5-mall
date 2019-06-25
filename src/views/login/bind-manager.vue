@@ -105,27 +105,27 @@ export default {
 
 <style scoped lang="less">
 @import '../../assets/less/define.less';
-.bind-manager{padding:0 40*@rem;width:@rem*750;margin:0 auto;
-    .item{margin-top:@rem*110;
-        .title{font-size:@rem*28;color:#282828;}
-        .group{border-bottom:1px solid #f5f5f5;height:@rem*80;}
+.bind-manager{padding: 0 40*@rem; width: @rem*750; margin:0 auto;
+    .item{margin-top: @rem*110;
+        .title{font-size: @rem*28; color:#282828;}
+        .group{border-bottom: 1px solid #f5f5f5; height: @rem*80;}
     }
-    .btn{margin-top:@rem*80;display:flex;justify-content: center;
-        .btn-item{width:@rem*240;height:@rem*80;line-height:@rem*80;text-align:center;border-radius:4px;font-size:@rem*30;color:#000;}
-        .btn-left{background:#fe823f;margin-right:@rem*60;}
-        .btn-right{border:1px solid #fe823f;}
+    .btn{margin-top:@rem*80; display: flex; justify-content: center;
+        .btn-item{width: @rem*240;height: @rem*80;line-height: @rem*80;text-align: center;border-radius: 4px;font-size: @rem*30;color: #000;}
+        .btn-left{background: #fe823f;margin-right: @rem*60;}
+        .btn-right{border: 1px solid #fe823f;}
     }
     .dialog{
-        .title{font-size:@rem*30;color:#282828;text-align:center;margin-top:@rem*56;margin-bottom:@rem*44;}
-        .icon{width:@rem*140;height:@rem*140;margin:0 auto;}
-        .referee-info{margin-top:@rem*16;
-            .name{font-size:@rem*28;color:#282828;}
-            .id{font-size:@rem*30;color:#959595;margin-top:@rem*15;}
+        .title{font-size: @rem*30;color: #282828; text-align: center; margin-top: @rem*56; margin-bottom: @rem*44;}
+        .icon{width: @rem*140; height: @rem*140; margin: 0 auto;}
+        .referee-info{margin-top: @rem*16;
+            .name{font-size: @rem*28;color: #282828;}
+            .id{font-size: @rem*30;color: #959595;margin-top: @rem*15;}
         }
-        .btn{margin-top:@rem*45;margin-bottom:@rem*60;display:flex;justify-content: center;
-            .btn-item{width:@rem*126;height:@rem*56;line-height:@rem*56;text-align:center;border-radius:4px;font-size:@rem*28;color:#282828;}
-            .btn-left{background:#fe823f;margin-right:@rem*55;}
-            .btn-right{border:1px solid #fe823f;}
+        .btn{margin-top: @rem*45; margin-bottom: @rem*60; display: flex; justify-content: center;
+            .btn-item{width: @rem*126; height: @rem*56; line-height: @rem*56; text-align: center; border-radius: 4px; font-size: @rem*28; color: #282828;}
+            .btn-left{background: #fe823f; margin-right: @rem*55;}
+            .btn-right{border: 1px solid #fe823f;}
         }
     }
 }

@@ -1,5 +1,5 @@
 <template>
-    <div class="user-order-index">
+    <div class="user-order-index wrap">
         <div class="tabs-container">
             <div class="tabs">
                 <div class="item" v-for="(item,index) in tabs" :key="index" @click="switchTabs(index)">
@@ -236,48 +236,48 @@ export default {
 
 <style scoped lang="less">
 @import '../../../assets/less/define.less';
-.user-order-index{width:@rem*750;margin:0 auto;
+.user-order-index{
     //导航条
-    .tabs-container{position:fixed;top:0;left:0;width:@rem*750;background:#fff;z-index:999;
-        .tabs{display:flex;
-            .item{flex:1;height:@rem*80;display:flex;justify-content: center; align-items:center;
-                .label{font-size:@rem*32;color:#999;display:inline-block;height:@rem*80;line-height:@rem*80;}
-                .active{color:#000;position:relative;}
-                .active:after{height:@rem*3;width:100%;background:#000;content:'';position:absolute;bottom:0;left:0;}
+    .tabs-container{position: fixed; top: 0; left: 0; width: @rem*750; background:#fff; z-index: 999;
+        .tabs{display: flex;
+            .item{flex: 1; height: @rem*80; display: flex; justify-content: center; align-items: center;
+                .label{font-size: @rem*32; color:#999; display: inline-block; height: @rem*80; line-height: @rem*80;}
+                .active{color:#000; position: relative;}
+                .active:after{height: @rem*3; width: 100%; background:#000; content: ''; position: absolute; bottom: 0; left: 0;}
             }
         }
     }
     .container{-webkit-overflow-scrolling: touch;}
-    .noOrder{display:flex;flex-direction: column;align-items:center;justify-content: center;height:100vh;
-        .icon{width:@rem*288;height:@rem*288;display: block;}
-        .text{margin-top:@rem*32;font-size:@rem*32;color:#999;}
+    .noOrder{display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;
+        .icon{width: @rem*288; height: @rem*288; display: block;}
+        .text{margin-top: @rem*32; font-size: @rem*32; color:#999;}
     }
-    .empty{height:@rem*80;}
-    .goods-list{border-top:1px solid #f5f5f5;border-bottom:1px solid #f5f5f5;
-        .title{display:flex;justify-content: space-between;align-items:center;height:@rem*80;padding-left:@rem*24;
-            .left{display:flex;align-items:center;
-                .imgs{margin-right:@rem*12;
-                    img{width:@rem*28;height:@rem*28;display:block;}
+    .empty{height: @rem*80;}
+    .goods-list{border-top: 1px solid #f5f5f5; border-bottom: 1px solid #f5f5f5;
+        .title{display: flex; justify-content: space-between; align-items: center; height: @rem*80; padding-left: @rem*24;
+            .left{display:flex; align-items:center;
+                .imgs{margin-right: @rem*12;
+                    img{width: @rem*28; height: @rem*28; display: block;}
                 }
-                .cell{display:flex;align-items:center;
-                    .date{font-size:@rem*28;color:#000;margin-right:@rem*12;}
-                    .time{font-size:@rem*28;color:#999;}
-                    .icon-more{font-size:@rem*32;}
+                .cell{display: flex; align-items: center;
+                    .date{font-size: @rem*28; color:#000; margin-right: @rem*12;}
+                    .time{font-size: @rem*28; color:#999;}
+                    .icon-more{font-size: @rem*32;}
                 }
             }
-            .right{font-size:@rem*28;color:#fff;width:@rem*120;height:@rem*48;line-height:@rem*48;background:#fe823f;text-align:center;}
-            .cancel{background:#999;color:#fff;}
+            .right{font-size: @rem*28; color:#fff; width: @rem*120; height: @rem*48; line-height: @rem*48; background:#fe823f; text-align: center;}
+            .cancel{background:#999; color:#fff;}
         }
-        .operation{padding:@rem*32 @rem*24 @rem*32;
-            .cell{display:flex;justify-content: space-between;
-                .label{font-size:@rem*28;color:#000;}
-                .value{font-size:@rem*28;color:#ff2828;}
+        .operation{padding: @rem*32 @rem*24 @rem*32;
+            .cell{display: flex; justify-content: space-between;
+                .label{font-size :@rem*28; color:#000;}
+                .value{font-size: @rem*28; color:#ff2828;}
             }
         }
-        .btns{display:flex;justify-content: flex-end;margin-top:@rem*32;
-            .btn{width:@rem*160;height:@rem*60;line-height:@rem*60;text-align:center;font-size:@rem*28;color:#666;border-radius:@rem*8;border:1px solid #666;margin-right:@rem*32;}
-            .red{color:#ff2828;border:1px solid #ff2828;}
-            div:last-child{margin-right:0;}
+        .btns{display: flex; justify-content: flex-end; margin-top: @rem*32;
+            .btn{width: @rem*160; height: @rem*60; line-height: @rem*60; text-align: center; font-size: @rem*28;color:#666; border-radius: @rem*8; border: 1px solid #666;margin-right:@rem*32;}
+            .red{color:#ff2828; border: 1px solid #ff2828;}
+            div:last-child{margin-right: 0;}
         }
     }
 }

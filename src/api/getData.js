@@ -49,15 +49,10 @@ export const managerInfo = (data) => axios('h5/referee/info', {data})
 // 热门商品
 // export const getHotGoods = (data) => axios('h5/index/goods', {data})
 // 首页数据
-export const getIndexData = (data) => axios('app/hm/index/data', {data})
+export const getIndexData = (data) => axios('h5/index/data', {data})
 
 // 获取店铺信息
 export const getStore = (data) => axios('h5/index/store', {data})
-/**
- *商铺模块
- */
-export const getShopList = (data) => axios('app/hm/shop/list', {data})
-export const getShopInfo = (data) => axios('app/hm/shop/info', {data})
 
 /*
  *****商品模块
@@ -116,7 +111,6 @@ export const getDefaultAddress = (data) => axios('h5/user/address/default/get', 
 
 // 订单提交
 export const confirmOrder = (data) => axios('h5/order/add', {data})
-export const shopConfirmOrder = (data) => axios('app/hm/shop/order/add', {data})
 
 /*
  *****地址模块
@@ -165,7 +159,6 @@ export const pay = (data) => axios('h5/order/pay', {data})
 // 订单结算
 export const settlement = (data) => axios('h5/wxpay/settlement', {data})
 export const shopSettlement = (data) => axios('h5/wxpay/shopSettlement', {data})
-export const getShopOrderList = (data) => axios('app/hm/shop/order/list', {data})
 
 // 订单详情
 export const getOrderInfo = (data) => axios('h5/order/info', {data})
@@ -190,6 +183,3 @@ export const getCoupon = (data) => axios('app/coupon/exchange', {data})
 
 // 可使用的优惠券
 export const getCanUserCoupon = (data) => axios('app/coupon/usableCoupon', {data})
-
-/** ********************活动版块**********************/
-export const getActivityPresell = (data) => axios('app/hm/index/share', {data})

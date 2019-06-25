@@ -1,5 +1,5 @@
 <template>
-    <div class="user-order-info">
+    <div class="user-order-info wrap">
         <!-- 待支付 -->
         <div class="header">
             <div class="title">{{title}}</div>
@@ -205,35 +205,35 @@ export default {
 
 <style scoped lang="less">
 @import '../../../assets/less/define.less';
-.user-order-info{width:@rem*750;margin:0 auto;
-    .header{padding:@rem*32 @rem*24;border-top:1px solid #f5f5f5;border-bottom:1px solid #f5f5f5;
-        .title{font-size:@rem*40;color:#000;}
-        .value{font-size:@rem*26;color:#333;margin-top:@rem*12;}
-        .cell{display:flex;justify-content: space-between;margin-top:@rem*32;align-items:center;
-            .left{font-size:@rem*32;color:#333;}
-            .copy-btn{width:@rem*82;height:@rem*40;line-height:@rem*40;border:1px solid #000;color:#333;text-align:center;border-radius:@rem*8;font-size:@rem*26;}
+.user-order-info{
+    .header{padding: @rem*32 @rem*24; border-top: 1px solid #f5f5f5; border-bottom: 1px solid #f5f5f5;
+        .title{font-size: @rem*40; color:#000;}
+        .value{font-size: @rem*26; color:#333; margin-top: @rem*12;}
+        .cell{display: flex;justify-content:  space-between;margin-top: @rem*32;align-items: center;
+            .left{font-size: @rem*32;color: #333;}
+            .copy-btn{width: @rem*82;height: @rem*40;line-height: @rem*40;border: 1px solid #000;color: #333;text-align: center;border-radius: @rem*8;font-size: @rem*26;}
         }
     }
-    .bg{height:@rem*20;background:#f5f5f5;}
-    .detail{margin-bottom: @rem*120;
-        .cell{display:flex;align-items:center;padding:@rem*30 @rem*24 0;
-            img{width:@rem*28;height:@rem*28;display:block;}
-            .date{font-size:@rem*28;color:#000;margin-right:@rem*12;margin-left:@rem*12;}
-            .time{font-size:@rem*28;color:#999;}
-            .icon-more{font-size:@rem*32;}
+    .bg{height: @rem*20;background: #f5f5f5;}
+    .detail{margin-bottom:  @rem*120;
+        .cell{display: flex; align-items: center; padding: @rem*30 @rem*24 0;
+            img{width: @rem*28;height: @rem*28; display: block;}
+            .date{font-size: @rem*28; color: #000; margin-right: @rem*12; margin-left: @rem*12;}
+            .time{font-size: @rem*28; color: #999;}
+            .icon-more{font-size: @rem*32;}
         }
-        .cost-detail{padding:@rem*32 @rem*24 0;
-            .cell{display:flex;justify-content: space-between;margin-bottom:@rem*32;padding:0;
-                .label{font-size:@rem*28;color:#333;}
-                .value{font-size:@rem*28;color:#333;}
-                .red{color:#ff2828;}
+        .cost-detail{padding: @rem*32 @rem*24 0;
+            .cell{display: flex; justify-content: space-between; margin-bottom: @rem*32; padding: 0;
+                .label{font-size: @rem*28; color: #333;}
+                .value{font-size: @rem*28; color: #333;}
+                .red{color: #ff2828;}
             }
         }
     }
-    .btn-bottom{width:@rem*750;height:@rem*88;line-height:@rem*88;background:#fe823f;font-size:@rem*32;color:#fff;text-align:center;position:fixed;bottom:0;left:0;}
-    .btns{width:@rem*750;border:1px solid #fe823f;position:fixed;bottom:0;left:0;
-        .btn{width:50%;height:@rem*88;line-height:@rem*88;text-align:center;font-size:@rem*32;color:#000;float:left;background:#fff;}
-        .yellow{background:#fe823f; color: #fff;}
+    .btn-bottom{width: @rem*750; height: @rem*88; line-height: @rem*88; background: #fe823f; font-size: @rem*32; color: #fff; text-align: center; position: fixed; bottom: 0;left: 0;}
+    .btns{width: @rem*750; border: 1px solid #fe823f; position: fixed; bottom: 0; left: 0;
+        .btn{width: 50%; height: @rem*88; line-height: @rem*88; text-align: center; font-size: @rem*32; color: #000; float: left; background: #fff;}
+        .yellow{background: #fe823f; color:  #fff;}
     }
 }
 </style>

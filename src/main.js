@@ -112,7 +112,8 @@ router.beforeEach((to, from, next) => {
     //         WechatPlugin.$wechat.onMenuShareTimeline(config)
     //     })
     // })
-
+    
+    // 设置网页标题
     if (to.meta.title) {
         document.title = `${to.meta.title}`
     } else {

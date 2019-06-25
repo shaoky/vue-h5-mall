@@ -1,5 +1,5 @@
 <template>
-    <div class="order-success">
+    <div class="order-success wrap">
         <div class="h5-success">
             <div class="imgs">
                 <img src="/static/images/order/icon-02.png">
@@ -68,24 +68,24 @@ export default {
 
 <style scoped lang="less">
 @import '../../../assets/less/define.less';
-.order-success{width:@rem*750;margin:0 auto;
+.order-success{
     .h5-success{
-        .imgs{margin-top:@rem*96;
-            img{display:flex;width:@rem*288;height:@rem*288;margin:0 auto;}
+        .imgs{margin-top: @rem*96;
+            img{display: flex; width: @rem*288; height: @rem*288; margin:0 auto;}
         }
-        .text{font-size:@rem*32;color:#999;text-align:center;margin-top:@rem*32;}
-        .btns{display:flex;margin-top:@rem*60;justify-content: center;
-            .btn{width:@rem*240;height:@rem*80;line-height:@rem*80;border-radius:@rem*8;border:1px solid #fe823f;text-align:center;font-size:@rem*30;color:#fff;}
-            .yellow{background:#fe823f;margin-right:@rem*60;}
+        .text{font-size: @rem*32; color:#999; text-align: center; margin-top: @rem*32;}
+        .btns{display: flex; margin-top: @rem*60; justify-content: center;
+            .btn{width: @rem*240; height:@rem*80; line-height: @rem*80; border-radius: @rem*8; border: 1px solid #fe823f; text-align: center; font-size: @rem*30; color:#fff;}
+            .yellow{background:#fe823f; margin-right: @rem*60;}
         }
-        .download{width:@rem*670;height:@rem*80;line-height:@rem*80;border-radius:@rem*8;background:#fe823f;text-align:center;font-size:@rem*30;color:#fff;margin:0 auto;margin-top:@rem*80;}
+        .download{width: @rem*670; height: @rem*80; line-height: @rem*80; border-radius: @rem*8; background:#fe823f; text-align: center; font-size: @rem*30; color:#fff;margin:0 auto;margin-top:@rem*80;}
     }
     .member-success{
-        .imgs{margin-top:@rem*96;
-            img{display:flex;width:@rem*288;height:@rem*288;margin:0 auto;}
+        .imgs{margin-top: @rem*96;
+            img{display: flex; width: @rem*288; height: @rem*288; margin: 0 auto;}
         }
-        .text{font-size:@rem*32;color:#999;text-align:center;margin-top:@rem*32;}
-        .btn{width:@rem*670;height:@rem*80;line-height:@rem*80;border-radius:@rem*8;background:#fe823f;text-align:center;font-size:@rem*30;color:#fff;margin:0 auto;margin-top:@rem*80;}
+        .text{font-size: @rem*32; color:#999; text-align: center; margin-top: @rem*32;}
+        .btn{width: @rem*670; height: @rem*80; line-height: @rem*80; border-radius: @rem*8; background:#fe823f; text-align: center; font-size: @rem*30; color:#fff;margin:0 auto;margin-top:@rem*80;}
     }
 }
 </style>

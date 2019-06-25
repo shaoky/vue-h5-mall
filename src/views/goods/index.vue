@@ -58,10 +58,10 @@
                         </div>
                     </div>
                     <!-- 没有产品 -->
-                    <div class="icon-null" v-if="isLoading && list.length == 0">
+                    <!-- <div class="icon-null" v-if="isLoading && list.length == 0">
                         <img src="../../assets/images/icon/icon-cart-null.png">
                         <span>没有商品</span>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- <div class="scroll-after" v-if="isComplete">暂无数据</div> -->
                 <div class="empty"></div>
@@ -132,7 +132,7 @@ export default {
             let res = await getGoodsList(this.search)
             let data = res.data
             this.list.push(...data.list)
-            if (data.list.length > 0) {
+            if (data.list.length >= 20) {
                 this.hasNext = true
             } else {
                 this.hasNext = false
@@ -142,6 +142,7 @@ export default {
         },
         // 切换导航条
         switchTabs (index) {
+            this.loading = true
             this.isActive = index
             if (index === 1) {
                 this.salesDefault = false
@@ -208,60 +209,60 @@ export default {
 
 <style scoped lang="less">
 @import '../../assets/less/define.less';
-.shop-index{width:@rem*750;margin:0 auto;
-    .search{background:#fff;position:fixed;width:@rem*750;top:0;display:flex;align-items:center;padding:0 @rem*28;z-index:999;height:@rem*120;
-        .search-input{padding-left:@rem*60;width:100%;height:@rem*60;border: none;border-radius:4px;background:#F4F4F4;font-size:@rem*28;margin-right:@rem*15;color:#999;}
-        .icon-column{width:@rem*32;height:@rem*32;}
-        .icon-wode{position:absolute;left:@rem*40;top:@rem*44;font-size:@rem*32;color:#999;}
+.shop-index{width:@rem*750; margin:0 auto;
+    .search{position: fixed; width: @rem*750; height: @rem*120; top: 0; display: flex; align-items: center; padding: 0 @rem*28; z-index:999; background:#fff;
+        .search-input{width: 100%; height: @rem*60; padding-left: @rem*60; border: none;border-radius: 4px; background:#F4F4F4; font-size: @rem*28; margin-right: @rem*15;color:#999;}
+        .icon-column{width: @rem*32; height: @rem*32;}
+        .icon-wode{position: absolute; left: @rem*40; top: @rem*44; font-size: @rem*32; color:#999;}
     }
-    .empty{height:@rem*100;}
+    .empty{height: @rem*100;}
     //margin-bottom:@rem*100;
-    .condition{padding:0 @rem*28;
-        .choice{margin-top:@rem*40;padding-bottom:@rem*28;display:flex;border-bottom:1px solid #f5f5f5;
-            .item{font-size:@rem*32;color:#000;flex:1;display:flex;justify-content:center;align-items:center;
+    .condition{padding: 0 @rem*28;
+        .choice{margin-top: @rem*40; padding-bottom: @rem*28; display: flex; border-bottom: 1px solid #f5f5f5;
+            .item{ display: flex; flex: 1; justify-content: center; align-items: center; font-size: @rem*32; color:#000;
                 .sort{margin-left:@rem*10;
-                    img{width:@rem*13;height:@rem*20;}
+                    img{width: @rem*13; height: @rem*20;}
                 }
             }
             .active{color:#ff2828;}
         }
-        .icon-null{ text-align: center; margin-top: @rem*100;
+        .icon-null{text-align: center; margin-top: @rem*100;
             img{width: @rem*288; display: block; margin: 0 auto;}
             span{margin-top: @rem*32; display: block; font-size: @rem*28; color: #999;}
         }
         //双列
-        .double-column{padding:@rem*36 0 0;
-            .shop-item{width:@rem*320;display:inline-block;margin-bottom:@rem*40;
-                img{width:@rem*320;height:@rem*320;border-radius:4px;}
-                .shop-info{margin-top:@rem*20;
-                    .title{font-size:@rem*30;color:#000;}
-                    .price{display:flex;align-items:center;margin-top:@rem*15;
-                        .member-price{font-size:@rem*28;color:#ff2828;margin-right:@rem*20;}
-                        del{font-size:@rem*24;color:#959595;}
+        .double-column{padding: @rem*36 0 0;
+            .shop-item{width: @rem*320; display: inline-block; margin-bottom: @rem*40;
+                img{width:@rem*320; height: @rem*320; border-radius: 4px;}
+                .shop-info{margin-top: @rem*20;
+                    .title{font-size: @rem*30; color:#000;}
+                    .price{display: flex; align-items:center; margin-top:@rem*15;
+                        .member-price{font-size: @rem*28; color:#ff2828; margin-right: @rem*20;}
+                        del{font-size: @rem*24; color:#959595;}
                     }
-                    .is-member{margin-top:@rem*10;
-                        .text{display:inline-block;padding:0 @rem*10; background:#fe823f; color: #fff; margin-right:@rem*10;font-size:@rem*24;}
-                        .member-price{display:inline-block;font-size:@rem*28;color:#ff2828;}
-                        del{font-size:@rem*24;color:#959595;margin-top:@rem*10;display:block;}
+                    .is-member{margin-top: @rem*10;
+                        .text{display: inline-block; padding:0 @rem*10; background:#fe823f; color: #fff; margin-right: @rem*10; font-size: @rem*24;}
+                        .member-price{display:inline-block ;font-size: @rem*28; color:#ff2828;}
+                        del{font-size: @rem*24; color:#959595; margin-top: @rem*10; display:block;}
                     }
                 }
             }
-            .shop-item:nth-child(odd){margin-right:@rem*54; }
+            .shop-item:nth-child(odd){margin-right: @rem*54;}
         }
         //单列
-        .single-column{padding:@rem*36 0 0;
-            .shop-item{display:flex;margin-bottom:@rem*40;
-                img{width:@rem*200;height:@rem*200;}
-                .shop-info{position:relative;height:@rem*200;padding:@rem*20 @rem*24;
-                    .title{font-size:@rem*30;color:#000;}
-                    .price{margin-top:@rem*15;position:absolute;bottom:@rem*20;width:@rem*470;
-                        .member-price{font-size:@rem*28;color:#ff2828;margin-right:@rem*20;display:inline-block;}
-                        del{font-size:@rem*24;color:#959595;display:inline-block;}
+        .single-column{padding: @rem*36 0 0;
+            .shop-item{display: flex; margin-bottom: @rem*40;
+                img{width: @rem*200; height: @rem*200;}
+                .shop-info{position: relative; height: @rem*200; padding: @rem*20 @rem*24;
+                    .title{font-size: @rem*30; color:#000;}
+                    .price{margin-top: @rem*15; position: absolute; bottom: @rem*20; width: @rem*470;
+                        .member-price{font-size: @rem*28; color:#ff2828; margin-right: @rem*20; display: inline-block;}
+                        del{font-size: @rem*24; color:#959595; display: inline-block;}
                     }
-                    .is-member{position:absolute;bottom:0;width:@rem*470;
-                        .text{display:inline-block;padding:0 @rem*10; background:#fe823f; color: #fff; margin-right:@rem*10;font-size:@rem*24;}
-                        .member-price{display:inline-block;font-size:@rem*28;color:#ff2828;}
-                        del{font-size:@rem*24;color:#959595;margin-top:@rem*10;display:block;}
+                    .is-member{position: absolute; bottom: 0; width: @rem*470;
+                        .text{display: inline-block; padding:0 @rem*10; background:#fe823f; color: #fff; margin-right: @rem*10; font-size: @rem*24;}
+                        .member-price{display: inline-block; font-size: @rem*28;color:#ff2828;}
+                        del{font-size: @rem*24;color:#959595;margin-top: @rem*10; display: block;}
                     }
                 }
             }

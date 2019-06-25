@@ -1,5 +1,5 @@
 <template>
-    <div class="user-set-index">
+    <div class="user-set-index wrap">
         <div class="info">
             <div class="x-cell">
                 <div class="label">头像</div>
@@ -119,29 +119,29 @@ export default {
 
 <style scoped lang="less">
 @import '../../../assets/less/define.less';
-.user-set-index{padding:0 @rem*28;width:@rem*750;margin:0 auto;
+.user-set-index{padding: 0 @rem*28;s
     .info{
-        .x-cell{display:flex;height:@rem*88;align-items:center;border-bottom:1px solid #f5f5f5;
-            .label{flex:1;font-size:@rem*28;color:#000;}
-            .value{display:flex;align-items:center;
-                .imgs{width:@rem*80;height:@rem*80;margin-right:@rem*16;
-                    img{height:100%;width:100%;display:block;border-radius:50%;}
+        .x-cell{display: flex; height: @rem*88; align-items: center; border-bottom: 1px solid #f5f5f5;
+            .label{flex: 1; font-size: @rem*28; color:#000;}
+            .value{display: flex; align-items: center;
+                .imgs{width: @rem*80; height: @rem*80; margin-right: @rem*16;
+                    img{height: 100%; width: 100%; display: block; border-radius: 50%;}
                 }
-                .text{font-size:@rem*24;margin-right:@rem*16;color:#959595;}
-                .icon-more{font-size:@rem*30;}
+                .text{font-size: @rem*24; margin-right: @rem*16; color:#959595;}
+                .icon-more{font-size: @rem*30;}
             }
         }
-        .x-cell:first-child{height:@rem*140;}
-        .x-cell:last-child{border-bottom:0;}
+        .x-cell:first-child{height: @rem*140;}
+        .x-cell:last-child{border-bottom: 0;}
     }
-    .btn{width:@rem*670;height:@rem*88;line-height:@rem*88;text-align:center;font-size:@rem*32;color:#fff;background:#fe823f;border-radius:@rem*8;margin-top:@rem*80;}
-    .btn-bottom{position:fixed;bottom:0;left:0;width:@rem*750;height:@rem*90;line-height:@rem*90;text-align:center;font-size:@rem*32;color:#000;background:#fe823f;}
+    .btn{width: @rem*670; height: @rem*88; line-height: @rem*88; text-align: center; font-size: @rem*32; color:#fff; background:#fe823f; border-radius: @rem*8;margin-top:@rem*80;}
+    .btn-bottom{position: fixed; bottom:0; left: 0; width: @rem*750; height: @rem*90; line-height: @rem*90; text-align: center; font-size: @rem*32; color:#000;background:#fe823f;}
     .dialog{
-        .title{font-size:@rem*30;color:#000;text-align:center;margin-top:@rem*60;}
-        .input{width:@rem*440;height:@rem*40; margin:0 auto;margin-top:@rem*60;margin-bottom:@rem*60;
-            input{border:none;width:100%;height:@rem*40;line-height:@rem*40;font-size:@rem*28;color:#959595;border-bottom:1px solid #ddd;border-radius:0px;}
+        .title{font-size: @rem*30; color:#000; text-align: center; margin-top: @rem*60;}
+        .input{width: @rem*440; height: @rem*40; margin: 0 auto; margin-top: @rem*60; margin-bottom: @rem*60;
+            input{border: none; width: 100%; height: @rem*40; line-height: @rem*40; font-size: @rem*28; color:#959595; border-bottom: 1px solid #ddd; border-radius: 0px;}
         }
-        .btn{height:@rem*80;line-height:@rem*80;text-align:center;font-size:@rem*30;color:#fff;background:#fe823f;}
+        .btn{height: @rem*80; line-height: @rem*80; text-align: center; font-size: @rem*30; color:#fff; background:#fe823f;}
     }
 }
 </style>

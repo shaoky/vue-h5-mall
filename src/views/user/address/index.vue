@@ -1,5 +1,5 @@
 <template>
-    <div class="user-address-index">
+    <div class="user-address-index wrap">
         <!-- 地址列表空 -->
         <div class="empty" v-if="isLoading&&list.length===0">
             <div class="imgs">
@@ -43,9 +43,7 @@
                 </div>
             </scroller>
 
-        <div class="btn-bottom" @click="toEdit">
-            添加地址
-        </div>
+        <div class="btn-bottom" @click="toEdit">添加地址</div>
     </div>
 </template>
 
@@ -149,34 +147,34 @@ export default {
 
 <style scoped lang="less">
 @import '../../../assets/less/define.less';
-.user-address-index{width:@rem*750;margin:0 auto;
+.user-address-index{
     .empty{
-        .imgs{margin-top:@rem*96;
-            img{width:@rem*288;height:@rem*288;margin:0 auto;display:block;}
+        .imgs{margin-top: @rem*96;
+            img{width: @rem*288; height: @rem*288; margin: 0 auto; display: block;}
         }
-        .text{margin-top:@rem*32;text-align:center;font-size:@rem*32;color:#999;}
+        .text{margin-top: @rem*32; text-align: center; font-size: @rem*32; color:#999;}
     }
     .address-list{
-        .del{height:100%;width:100%;background:#FF2828;display:flex;align-items:center;justify-content: center;
-            img{height:@rem*40;width:@rem*40;}
+        .del{height: 100%; width: 100%; background:#FF2828; display: flex; align-items: center; justify-content: center;
+            img{height: @rem*40; width: @rem*40;}
         }
-        .item{border-bottom:1px solid #f5f5f5;min-height:@rem*198;
-            .default{height:@rem*60;display:flex;justify-content: flex-end;align-items:flex-end;
-                .btn-default{width:@rem*120;height:@rem*40;line-height:@rem*40;text-align:center;font-size:@rem*26;color:#fff;background:#fe823f;border-radius:@rem*4;}
+        .item{border-bottom: 1px solid #f5f5f5; min-height: @rem*198;
+            .default{height: @rem*60; display: flex; justify-content: flex-end; align-items: flex-end;
+                .btn-default{width: @rem*120; height: @rem*40; line-height: @rem*40; text-align: center; font-size: @rem*26; color:#fff; background:#fe823f; border-radius: @rem*4;}
             }
-            .cell{display:flex;padding:0 @rem*24;
-                .address-detail{flex:1;
-                    .name{font-size:@rem*28;color:#000;margin-top:@rem*20;
-                        span{font-size:@rem*24;color:#999;}
+            .cell{display: flex; padding: 0 @rem*24;
+                .address-detail{flex: 1;
+                    .name{font-size: @rem*28; color:#000; margin-top: @rem*20;
+                        span{font-size: @rem*24; color:#999;}
                     }
-                    .address{font-size:@rem*28;color:#000;margin-top:@rem*30;word-wrap: break-word;word-break: normal;}
+                    .address{font-size: @rem*28; color:#000; margin-top: @rem*30; word-wrap: break-word; word-break: normal;}
                 }
-                .edit-container{height:@rem*198;width:@rem*126;display:flex;align-items:center;justify-content: center;}
-                .edit{width:@rem*126;height:@rem*40;line-height:@rem*40;font-size:@rem*28;color:#999;text-align:center;border-left:1px solid #f5f5f5;}
+                .edit-container{height: @rem*198; width: @rem*126; display: flex; align-items: center; justify-content: center;}
+                .edit{width: @rem*126; height: @rem*40; line-height: @rem*40; font-size: @rem*28; color:#999; text-align: center; border-left: 1px solid #f5f5f5;}
             }
         }
     }
-    .btn-bottom{position:fixed;bottom:0;width:@rem*750;height:@rem*90;line-height:@rem*90;text-align:center;font-size:@rem*32;color:#fff;background:#fe823f;}
+    .btn-bottom{position: fixed; bottom: 0; width: @rem*750; height: @rem*90; line-height: @rem*90; text-align: center; font-size: @rem*32; color:#fff; background:#fe823f;}
 
 }
 </style>

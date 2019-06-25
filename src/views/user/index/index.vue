@@ -1,5 +1,5 @@
 <template>
-    <div class="user-index">
+    <div class="user-index wrap">
         <div class="header">
             <div class="empty"></div>
             <div class="user-info">
@@ -117,7 +117,7 @@ export default {
 
 <style scoped lang="less">
 @import '../../../assets/less/define.less';
-.user-index{width:@rem*750;margin:0 auto;
+.user-index{
     .icon-more{font-size:@rem*32;color:#666;}
     .header{display:flex;margin-top:@rem*32;padding:0 @rem*24;
         .empty{flex:1}

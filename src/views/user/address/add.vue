@@ -1,5 +1,5 @@
 <template>
-    <div class="address-add">
+    <div class="address-add wrap">
         <div class="cell">
             <div class="value">收货人：</div>
             <div class="cell-input">
@@ -189,32 +189,35 @@ export default {
 
 <style scoped lang="less">
 @import '../../../assets/less/define.less';
-.address-add{padding:0 @rem*20;width:@rem*750;margin:0 auto;
-    .cell{padding:@rem*24 0;border-bottom:1px solid #f5f5f5;
-        .value{font-size:@rem*28;color:#000;}
+.address-add{padding: 0 @rem*20;
+    .cell{padding: @rem*24 0; border-bottom: 1px solid #f5f5f5;
+        .value{font-size: @rem*28; color:#000;}
         .font{color:#959595;}
-        .cell-input{margin-top:@rem*20;
-            .input{border:none;color:#959595;font-size:@rem*28;width:100%;}
+        .cell-input{margin-top: @rem*20;
+            .input{border: none; color:#959595; font-size: @rem*28; width: 100%;}
         }
-        .cell-textarea{height:@rem*80;margin-top:@rem*20;
-            .textarea{height:100%;width:100%;border:none;overflow-y: true;font-size:@rem*28;color:#959595;}
+        .cell-textarea{height: @rem*80; margin-top: @rem*20;
+            .textarea{height: 100%; width: 100%; border: none; overflow-y: true; font-size: @rem*28; color:#959595;}
         }
-        .cell-address{margin-top:@rem*20;
-            .address{font-size:@rem*28;color:#959595;}
+        .cell-address{margin-top: @rem*20;
+            .address{font-size: @rem*28;color:#959595;}
         }
     }
-    .btn{width:@rem*670;height:@rem*88;line-height:@rem*88;text-align:center;font-size:@rem*32;color:#fff;border-radius:@rem*8;background:#fe823f;margin:0 auto;margin-top:@rem*60;}
+    .btn{
+        width: @rem*670; margin: 0 auto; margin-top:@rem*60; height: @rem*88; line-height: @rem*88; 
+        text-align: center; font-size: @rem*32; color:#fff; border-radius: @rem*8; background:#fe823f;
+    }
 }
 </style>
 <style lang="less">
 @import '../../../assets/less/define.less';
 .address-add{
-    .weui-cells:before{border-top:0;}
-    .weui-cells:after{border-bottom:0;}
-    .weui-label{font-size:@rem*30;}
-    .weui-cell{padding:@rem*20 0;}
+    .weui-cells:before{border-top: 0;}
+    .weui-cells:after{border-bottom: 0;}
+    .weui-label{font-size: @rem*30;}
+    .weui-cell{padding: @rem*20 0;}
     .weui-cell__hd{
-        .weui-label{font-size:@rem*28!important;color:#959595;}
+        .weui-label{font-size: @rem*28!important; color:#959595;}
     }
 }
 </style>

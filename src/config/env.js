@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === 'development') {
     window.vConsole = new window.VConsole()
     loginUrl = 'https://tapi.mall.shaoky.com/h5/wechat/oauth'
     shareUrl = 'https://shaoky.mynatapp.cc'
-    baseUrl = 'http://lapi.mall.shaoky.com/'
+    baseUrl = 'http://api.mall.shaoky.com/'
     // baseUrl = 'http://192.168.3.58:82/'
     imgBaseUrl = 'https://tapi.mall.shaoky.com/admin/upload/public'
     isLocaltion = true

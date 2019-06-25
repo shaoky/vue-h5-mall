@@ -1,7 +1,7 @@
 <template>
-    <div class="cart-index">
+    <div class="cart-index wrap">
         <!-- 空购物车 -->
-        <div class="empty" v-if="list.length===0">
+        <div class="empty" v-if="list.length===0 && isLoading">
             <div class="img">
                 <img src="../../assets/images/icon/icon-cart-null.png">
             </div>
@@ -10,7 +10,7 @@
         </div>
 
         <!-- 非空购物车 -->
-        <div class="unEmpty" v-if="list.length>0">
+        <div class="unEmpty" v-if="list.length>0 && isLoading">
             <swipeout>
                 <swipeout-item v-for="(item,index) in list" :key="index" >
                     <div  slot="right-menu">
@@ -73,6 +73,7 @@ import { getCartList, updateCart, validateCart, delCart } from '@/api/getData'
 export default {
     data () {
         return {
+            isLoading: false,
             search: {
                 page: 0, size: 20
             },
@@ -116,6 +117,7 @@ export default {
         async getCartList () {
             let res = await getCartList(this.search)
             console.log(res)
+            this.isLoading = true
             this.list = res.data.list
         },
         // 选中更新购物车
@@ -192,35 +194,38 @@ export default {
 
 <style scoped lang="less">
 @import '../../assets/less/define.less';
-.cart-index{width:@rem*750;margin:0 auto;
+.cart-index{
     //空购物车
     .empty{
-        .img{margin-top:@rem*96;
-            img{width:@rem*288;height:@rem*288;display: block;margin:0 auto;}
+        .img{margin-top: @rem*96;
+            img{width: @rem*288; height: @rem*288; display: block; margin:0 auto;}
         }
-        .text{margin-top:@rem*32;font-size:@rem*32;color:#999;text-align:center;}
-        .btn{width:@rem*240;height:@rem*80;line-height:@rem*80;text-align:center;font-size:@rem*30;color:#fff;margin:0 auto;margin-top:@rem*60;background:#fe823f;border-radius:@rem*8;}
+        .text{margin-top: @rem*32; font-size: @rem*32; color:#999; text-align: center;}
+        .btn{width: @rem*240; height: @rem*80;line-height: @rem*80;text-align: center; font-size: @rem*30; color:#fff; margin:0 auto; margin-top: @rem*60; background:#fe823f;border-radius:@rem*8;}
     }
     //非空购物车
     .unEmpty{
-        .item{border-top:1px solid #f5f5f5;padding:@rem*28 @rem*24;display:flex;align-items:center;width:@rem*750;
-            .imgs{width:@rem*32;height:@rem*32;
-                .icon-yuanxingweixuanzhong{color:#aaa;font-size:@rem*32;}
-                img{width:100%;height:100%;display:block;}
+        .item{display: flex; align-items: center; width: @rem*750; padding: @rem*28 @rem*24; border-top: 1px solid #f5f5f5;
+            .imgs{width: @rem*32; height: @rem*32;
+                .icon-yuanxingweixuanzhong{color:#aaa; font-size: @rem*32;}
+                img{width: 100%;height: 100%; display: block;}
             }
-            .goods-detail{display:flex;position:relative;flex:1;margin-left:@rem*20;
-                img{width:@rem*150;height:@rem*150;margin-right:@rem*28;border-radius:@rem*8;}
-                .goods-info{height:@rem*150;flex:1;
-                    .title{font-size:@rem*28;color:#333;}
-                    .spec{font-size:@rem*24;color:#999;}
-                    .bottom{position:absolute;bottom:0;width:@rem*472;
-                        .flex{display:flex;justify-content: space-between;
-                            .price{font-size:@rem*28;color:#ff2828;}
-                            .selector{display:flex;align-items:center;
-                                .reduce,.add{width:@rem*32;height:@rem*32;
-                                    img{width:@rem*32;height:@rem*32;display:block;}
+            .goods-detail{display: flex; position: relative; flex: 1; margin-left: @rem*20;
+                img{width: @rem*150; height: @rem*150; margin-right: @rem*28; border-radius: @rem*8;}
+                .goods-info{flex:1; height: @rem*150;
+                    .title{font-size: @rem*28; color:#333;}
+                    .spec{font-size: @rem*24; color:#999;}
+                    .bottom{position: absolute; bottom:0; width: @rem*472;
+                        .flex{display:flex; justify-content: space-between;
+                            .price{font-size: @rem*28; color:#ff2828;}
+                            .selector{display: flex; align-items: center;
+                                .reduce,.add{width: @rem*32; height: @rem*32;
+                                    img{width: @rem*32; height: @rem*32; display: block;}
                                 }
-                                .num{background:#EBECF1;width:@rem*80;height:@rem*40;line-height:@rem*40;border-radius:@rem*8;font-size:@rem*28;color:#333;text-align:center;margin-left:@rem*18;margin-right:@rem*18;}
+                                .num{
+                                    width: @rem*80; height:@rem*40; line-height: @rem*40; margin-left:@rem*18; margin-right:@rem*18;
+                                    border-radius:@rem*8; font-size: @rem*28; background:#EBECF1; color:#333; text-align:center;
+                                }
                             }
                         }
                     }
@@ -228,18 +233,18 @@ export default {
             }
         }
     }
-    .cell{position:absolute;bottom:@rem*100;padding:@rem*24;border-top:1px solid #f5f5f5;width:@rem*750;
-        .flex{display:flex;align-items:center;justify-content: space-between;
-            .cell-left{display:flex;align-items:center;
-                .icon-yuanxingweixuanzhong{margin-right:@rem*12;font-size:@rem*32;}
-                img{width:@rem*32;height:@rem*32;margin-right:@rem*12;}
-                .value{font-size:@rem*28;color:#666;}
+    .cell{position: absolute; bottom: @rem*100; width: @rem*750; padding: @rem*24; border-top: 1px solid #f5f5f5; 
+        .flex{display: flex; align-items: center; justify-content: space-between;
+            .cell-left{display: flex; align-items: center;
+                .icon-yuanxingweixuanzhong{margin-right: @rem*12; font-size: @rem*32;}
+                img{width: @rem*32; height: @rem*32; margin-right: @rem*12;}
+                .value{font-size: @rem*28; color:#666;}
             }
-            .cell-right{display:flex;align-items:center;
-                .value{font-size:@rem*28;color:#000;margin-right:@rem*24;
+            .cell-right{display:flex; align-items: center;
+                .value{font-size: @rem*28; color:#000; margin-right: @rem*24;
                     span{color:#ff2828;}
                 }
-                .btn{width:@rem*142;height:@rem*62;line-height:@rem*62;font-size:@rem*30;color:#fff;text-align:center;background:#fe823f;border-radius:@rem*8;}
+                .btn{width: @rem*142; height: @rem*62; line-height: @rem*62; font-size: @rem*30; color:#fff; text-align: center; background:#fe823f; border-radius: @rem*8;}
             }
         }
 
